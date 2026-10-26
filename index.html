@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fox Kitchens | Alquiler de Equipos Industriales de Cocina en Colombia</title>
+  <meta name="description" content="Alquiler de equipos industriales y profesionales de cocina para restaurantes, cocinas ocultas, Food Trucks, festivales, conciertos y eventos en todo el país. Sin cláusulas de permanencia ni fiadores." />
+  <meta name="theme-color" content="#063B59" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fox Kitchens | Equipos Industriales de Cocina en Alquiler" />
+  <meta property="og:description" content="Equipa tu restaurante, cocina oculta, Food Truck o evento masivo sin descapitalizarte. Cobertura nacional, sin fiadores ni cláusulas de permanencia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/logo-positive.png" />
+
+  <!-- Favicon (Symbol only, without text) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?v=2" />
+  <link rel="icon" type="image/png" sizes="412x412" href="assets/img/favicon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png?v=2" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..600&family=Outfit:wght@500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__item">
+        <span class="topbar__dot"></span>
+        <span>Cobertura nacional en toda Colombia · Restaurantes, Cocinas Ocultas, Food Trucks y Eventos</span>
+      </div>
+      <div class="topbar__contacts">
+        <a href="https://wa.me/573185778389?text=Hola%20Fox%20Kitchens%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20el%20alquiler%20de%20equipos%20de%20cocina." target="_blank" rel="noopener" class="topbar__link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          318 577 8389
+        </a>
+        <span class="topbar__divider">|</span>
+        <a href="mailto:foxfinancialsconsultores@gmail.com" class="topbar__link">foxfinancialsconsultores@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header (Light Background for Positive Primary Logo) -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="header__brand" aria-label="Fox Kitchens Inicio">
+        <img src="assets/img/logo-positive.png" alt="Fox Kitchens Logo" class="header__logo" width="190" height="76" fetchpriority="high" />
+      </a>
+
+      <nav class="nav" id="nav-menu" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#modalidades" class="nav__link">Modalidades</a></li>
+          <li><a href="#equipos" class="nav__link">Equipos por Zonas</a></li>
+          <li><a href="#beneficios" class="nav__link">Beneficios</a></li>
+          <li><a href="#testimonios" class="nav__link">Clientes</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="btn btn--outline-navy btn--sm header__cart-btn" id="open-quote-drawer" aria-label="Ver equipos seleccionados">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span>Mi Cotización</span>
+          <span class="badge-count" id="quote-counter">0</span>
+        </button>
+
+        <a href="https://wa.me/573185778389?text=Hola%20Fox%20Kitchens%2C%20quiero%20una%20asesor%C3%ADa%20gratuita%20para%20alquilar%20equipos%20de%20cocina." target="_blank" rel="noopener" class="btn btn--primary btn--sm header__cta">
+          Hablemos
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <button class="header__burger" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero__bg-pattern" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="pill-badge">
+            <span class="pill-badge__icon">🔥</span>
+            <span>Alquiler de Equipos Industriales de Cocina en Todo el País</span>
+          </div>
+
+          <h1 class="hero__title">
+            El restaurante o evento de tus sueños, <span class="text-italic-orange">más cerca que nunca.</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            Fortalecemos el emprendimiento gastronómico y tu inversión a nivel nacional. Alquila todos los equipos profesionales que necesitas para <strong>restaurantes, cocinas ocultas, Food Trucks</strong> o <strong>eventos de pocos días (festivales, conciertos y ferias)</strong> sin descapitalizarte.
+          </p>
+
+          <div class="hero__cta-group">
+            <a href="#equipos" class="btn btn--primary btn--lg">
+              Explorar Equipos y Cotizar
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#modalidades" class="btn btn--secondary btn--lg">
+              Conoce las Modalidades
+            </a>
+          </div>
+
+          <div class="hero__metrics">
+            <div class="metric-item">
+              <span class="metric-item__val">Hasta 25 m²</span>
+              <span class="metric-item__label">Montaje integral o por equipos</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-item__val">0 Cláusulas</span>
+              <span class="metric-item__label">Sin permanencia obligatoria</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-item__val">Sin Fiadores</span>
+              <span class="metric-item__label">Ni aseguradoras complejas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="kitchen-stage" id="kitchen-stage">
+            <!-- Top Bar: Mode Switcher + Auto-Play Indicator -->
+            <div class="kitchen-stage__topbar">
+              <div class="stage-mode-switch" role="tablist" aria-label="Vista del simulador">
+                <button type="button" class="stage-mode-btn active" data-stage-view="assembly">
+                  <span>🏗️ Armado por Zonas</span>
+                </button>
+                <button type="button" class="stage-mode-btn" data-stage-view="compare">
+                  <span>↔️ Vacío vs. Equipado</span>
+                </button>
+                <button type="button" class="stage-mode-btn" data-stage-view="event">
+                  <span>🎪 Stand Festival</span>
+                </button>
+              </div>
+              <button type="button" class="stage-play-toggle" id="stage-play-toggle" title="Pausar / Reproducir animación automática" aria-label="Pausar animación">
+                <span class="play-dot"></span>
+                <span id="stage-play-label">Auto 3D</span>
+              </button>
+            </div>
+
+            <!-- Main 3D Viewport -->
+            <div class="kitchen-viewport" id="kitchen-viewport" data-active-step="3">
+              <!-- Base Layer: Empty Blueprint Shell -->
+              <img src="assets/img/hero-kitchen-empty.jpg" alt="Espacio de cocina vacío con planos" class="kitchen-layer kitchen-layer--empty" width="800" height="600" />
+
+              <!-- Equipped Layer: Full 3D Isometric Kitchen (revealed progressively or via slider) -->
+              <div class="kitchen-layer kitchen-layer--equipped" id="kitchen-equipped-layer">
+                <img src="assets/img/hero-kitchen-full.jpg" alt="Cocina industrial equipada en 3D por Fox Kitchens" width="800" height="600" />
+              </div>
+
+              <!-- Event Booth Layer (Hidden unless "Stand Festival" is active) -->
+              <div class="kitchen-layer kitchen-layer--event" id="kitchen-event-layer">
+                <img src="assets/img/hero-event-booth.jpg" alt="Stand de festival y eventos equipado por Fox Kitchens" width="800" height="600" />
+              </div>
+
+              <!-- Zone Highlight Glow Overlays -->
+              <div class="zone-spotlight" id="zone-spotlight"></div>
+
+              <!-- Interactive 3D Hotspots -->
+              <div class="stage-hotspots" id="stage-hotspots">
+                <!-- Zona 03: Trabajo (Left / Back Wall) -->
+                <button type="button" class="hotspot hotspot--work" style="top: 38%; left: 26%;" data-hotspot-step="1" aria-label="Zona de Trabajo">
+                  <span class="hotspot__pulse"></span>
+                  <span class="hotspot__pin">03</span>
+                  <div class="hotspot__card">
+                    <strong>🛠️ 03. Zona de Trabajo</strong>
+                    <span>3 Mesones en acero · 4 Repisas · 1 Lavaplatos</span>
+                  </div>
+                </button>
+
+                <!-- Zona 02: Fría (Right Side) -->
+                <button type="button" class="hotspot hotspot--cold" style="top: 47%; left: 79%;" data-hotspot-step="2" aria-label="Zona Fría">
+                  <span class="hotspot__pulse"></span>
+                  <span class="hotspot__pin">02</span>
+                  <div class="hotspot__card">
+                    <strong>❄️ 02. Zona Fría</strong>
+                    <span>Nevera Vertical + Congelador Paletero</span>
+                  </div>
+                </button>
+
+                <!-- Zona 01: Caliente (Center / Front Cooking Line) -->
+                <button type="button" class="hotspot hotspot--hot" style="top: 60%; left: 50%;" data-hotspot-step="3" aria-label="Zona Caliente">
+                  <span class="hotspot__pulse"></span>
+                  <span class="hotspot__pin">01</span>
+                  <div class="hotspot__card">
+                    <strong>🔥 01. Zona Caliente</strong>
+                    <span>Estufa 6 puestos · Plancha · Parrilla · Freidor · Horno</span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Before / After Slider Handle (Only visible in Compare Mode) -->
+              <div class="compare-slider-ui" id="compare-slider-ui" aria-hidden="true">
+                <div class="compare-divider-line" id="compare-divider-line">
+                  <div class="compare-handle">↔</div>
+                </div>
+                <span class="compare-tag compare-tag--before">Local Vacío (Planos)</span>
+                <span class="compare-tag compare-tag--after">Equipado por Fox Kitchens</span>
+                <input type="range" min="0" max="100" value="65" class="compare-range-input" id="compare-range-input" aria-label="Deslizar para comparar local vacío y equipado" />
+              </div>
+
+              <!-- Live Status Caption Pill -->
+              <div class="stage-caption-pill" id="stage-caption-pill">
+                <span class="stage-caption-pill__badge" id="stage-caption-badge">Cocina 100% Equipada</span>
+                <span class="stage-caption-pill__text" id="stage-caption-text">Estufa, Plancha, Parrilla, Freidor, Neveras y Mesones listos para producir</span>
+              </div>
+            </div>
+
+            <!-- Bottom Stepper: Step-by-Step Kitchen Assembly Controls -->
+            <div class="stage-stepper" id="stage-stepper" role="group" aria-label="Fases de armado de la cocina">
+              <button type="button" class="stage-step" data-step="0">
+                <span class="stage-step__num">00</span>
+                <span class="stage-step__label">Espacio Vacío</span>
+              </button>
+              <button type="button" class="stage-step" data-step="1">
+                <span class="stage-step__num">01</span>
+                <span class="stage-step__label">🛠️ Zona Trabajo</span>
+              </button>
+              <button type="button" class="stage-step" data-step="2">
+                <span class="stage-step__num">02</span>
+                <span class="stage-step__label">❄️ Zona Fría</span>
+              </button>
+              <button type="button" class="stage-step active" data-step="3">
+                <span class="stage-step__num">03</span>
+                <span class="stage-step__label">🔥 Cocina Lista</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE BANNER -->
+    <div class="marquee" aria-label="Promoción asesoría gratuita">
+      <div class="marquee__track">
+        <a href="https://wa.me/573185778389?text=Hola%20Fox%20Kitchens%2C%20solicito%20mi%20asesor%C3%ADa%20gratis." target="_blank" rel="noopener" class="marquee__content">
+          <span>SOLICITA TU ASESORÍA GRATIS AHORA ¡HAZ CLIC AQUÍ!</span>
+          <span class="marquee__sep">✦</span>
+          <span>ALQUILER PARA RESTAURANTES, COCINAS OCULTAS, FOOD TRUCKS Y EVENTOS</span>
+          <span class="marquee__sep">✦</span>
+          <span>SIN FIADORES NI CLÁUSULAS DE PERMANENCIA</span>
+          <span class="marquee__sep">✦</span>
+          <span>SOLICITA TU ASESORÍA GRATIS AHORA ¡HAZ CLIC AQUÍ!</span>
+          <span class="marquee__sep">✦</span>
+          <span>ALQUILER PARA RESTAURANTES, COCINAS OCULTAS, FOOD TRUCKS Y EVENTOS</span>
+          <span class="marquee__sep">✦</span>
+          <span>SIN FIADORES NI CLÁUSULAS DE PERMANENCIA</span>
+          <span class="marquee__sep">✦</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- NOSOTROS + MODALIDADES DE ALQUILER -->
+    <section class="section" id="nosotros">
+      <div class="container">
+        <div class="about-banner">
+          <div class="about-banner__left">
+            <span class="section-eyebrow">Sobre Fox Kitchens</span>
+            <h2 class="section-title">Impulsamos tu proyecto gastronómico sin congelar tu capital en maquinaria</h2>
+            <p class="section-desc">
+              En <strong>Fox Kitchens</strong> nos especializamos en fortalecer el emprendimiento gastronómico y proteger su inversión a nivel nacional, ofreciendo en alquiler todos los equipos industriales y profesionales necesarios para operar al máximo nivel desde el primer día.
+            </p>
+
+            <div class="about-stats-grid">
+              <div class="about-stat-box">
+                <div class="about-stat-box__num">25 m²</div>
+                <p>Capacidad de equipamiento integral para cocinas completas o alquiler flexible de equipos específicos según tu operación.</p>
+              </div>
+              <div class="about-stat-box about-stat-box--accent">
+                <div class="about-stat-box__num">100%</div>
+                <p>Flexibilidad operativa: cambia de equipos cuando tu menú crezca o alquila solo por los días que dure tu evento.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-banner__video-col">
+            <div class="reel-card" id="promo-reel-card">
+              <div class="reel-card__badge">
+                <span class="reel-live-dot"></span>
+                <span>Conoce nuestras cocinas reales · 0:30s</span>
+              </div>
+
+              <video
+                id="promo-video"
+                class="reel-card__video"
+                src="assets/video/fox-kit-promo.mp4"
+                loop
+                playsinline
+                preload="auto"
+              ></video>
+
+              <div class="reel-card__controls">
+                <div class="reel-card__controls-row">
+                  <button type="button" class="reel-btn reel-btn--sound" id="toggle-video-sound" aria-label="Activar o desactivar audio del video" title="Activar / desactivar audio">
+                    <svg class="icon-unmuted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                    </svg>
+                    <svg class="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                      <line x1="23" y1="9" x2="17" y2="15"></line>
+                      <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                  </button>
+                  <div class="reel-card__right-controls">
+                    <span class="reel-time" id="promo-video-time">0:00 / 0:30</span>
+                    <button type="button" class="reel-btn reel-btn--play" id="toggle-video-play" aria-label="Pausar o reproducir video">
+                      <span id="play-icon">▶</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="reel-scrubber-wrap" title="Adelantar o retroceder video">
+                  <input
+                    type="range"
+                    id="promo-video-scrubber"
+                    class="reel-scrubber"
+                    min="0"
+                    max="100"
+                    step="0.1"
+                    value="0"
+                    aria-label="Línea de tiempo del video"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODALIDADES -->
+        <div id="modalidades" class="modes-block">
+          <div class="section-header text-center">
+            <span class="section-eyebrow">Dos Líneas de Servicio</span>
+            <h2 class="section-title">Soluciones a la medida de tu operación</h2>
+            <p class="section-desc max-w-680 mx-auto">
+              Ya sea que estés abriendo o expandiendo un punto permanente, o que necesites equipar un stand de alto tráfico por un fin de semana, tenemos el modelo exacto para ti.
+            </p>
+          </div>
+
+          <div class="modes-grid">
+            <!-- Modalidad 1: Negocios Permanentes -->
+            <article class="mode-card mode-card--navy">
+              <div class="mode-card__top">
+                <span class="mode-card__badge">Mediano y Largo Plazo</span>
+                <div class="mode-card__icon">🏪</div>
+              </div>
+              <h3 class="mode-card__title">Restaurantes, Cocinas Ocultas y Food Trucks</h3>
+              <p class="mode-card__desc">
+                Abre tu primer punto o expande tu marca a nuevas sedes con una inversión inicial mínima. Equipamos cocinas industriales de hasta 25 m² listas para producir.
+              </p>
+              <ul class="mode-card__list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Restaurantes con servicio al público:</strong> Equipos robustos para operación continua.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Cocinas Ocultas (Dark Kitchens):</strong> Optimización total del espacio para delivery.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Food Trucks:</strong> Maquinaria compacta y de alto poder calórico/frigorífico.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Cambio de equipos ilimitado</strong> según evolucione tu carta, sin cláusulas de permanencia.</span>
+                </li>
+              </ul>
+              <div class="mode-card__actions">
+                <a href="#equipos" class="btn btn--primary btn--full" data-select-modality="Negocio Permanente (Restaurante / Cocina Oculta / Food Truck)">
+                  Cotizar para mi Negocio
+                </a>
+              </div>
+            </article>
+
+            <!-- Modalidad 2: Eventos de pocos días -->
+            <article class="mode-card mode-card--orange">
+              <div class="mode-card__top">
+                <span class="mode-card__badge mode-card__badge--hot">Alquiler por Pocos Días</span>
+                <div class="mode-card__icon">🎪</div>
+              </div>
+              <h3 class="mode-card__title">Festivales, Conciertos, Ferias y Eventos</h3>
+              <p class="mode-card__desc">
+                ¿Participas en un festival gastronómico, concierto, feria empresarial o pop-up de pocos días? Alquila solo los equipos que necesitas durante los días del evento.
+              </p>
+              <ul class="mode-card__list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Festivales y Conciertos:</strong> Equipos de respuesta rápida para picos altos de ventas.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Ferias y Exposiciones:</strong> Presentación impecable en acero inoxidable profesional.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Alquiler por días o fines de semana:</strong> Sin comprar ni almacenar maquinaria después del evento.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span><strong>Logística ágil:</strong> Entrega oportuna, instalación y retiro al finalizar.</span>
+                </li>
+              </ul>
+              <div class="mode-card__actions">
+                <a href="#equipos" class="btn btn--navy btn--full" data-select-modality="Evento por Días (Festival / Concierto / Feria)">
+                  Cotizar para un Evento
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO INTERACTIVO DE EQUIPOS POR ZONAS -->
+    <section class="section section--gray" id="equipos">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Catálogo Profesional</span>
+          <h2 class="section-title">Los equipos que tenemos para ti</h2>
+          <p class="section-desc max-w-680 mx-auto">
+            Explora nuestras <strong>3 zonas de equipamiento industrial</strong>. Haz clic en los equipos que necesitas para armar tu solicitud de cotización personalizada en segundos.
+          </p>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="zones-tabs" role="tablist" aria-label="Zonas de cocina">
+          <button type="button" class="zone-tab active" role="tab" aria-selected="true" data-zone-filter="all">
+            <span class="zone-tab__num">✦</span>
+            <span class="zone-tab__name">Todas las Zonas (12)</span>
+          </button>
+          <button type="button" class="zone-tab" role="tab" aria-selected="false" data-zone-filter="caliente">
+            <span class="zone-tab__num">01</span>
+            <span class="zone-tab__name">🔥 Zona Caliente</span>
+          </button>
+          <button type="button" class="zone-tab" role="tab" aria-selected="false" data-zone-filter="fria">
+            <span class="zone-tab__num">02</span>
+            <span class="zone-tab__name">❄️ Zona Fría</span>
+          </button>
+          <button type="button" class="zone-tab" role="tab" aria-selected="false" data-zone-filter="trabajo">
+            <span class="zone-tab__num">03</span>
+            <span class="zone-tab__name">🛠️ Zona de Trabajo</span>
+          </button>
+        </div>
+
+        <!-- Equipment Grid (Rendered / Enhanced by JS, with static SEO fallback) -->
+        <div class="equipment-grid" id="equipment-grid">
+          <!-- ZONA 01: CALIENTE -->
+          <article class="equip-card" data-zone="caliente" data-id="freidor" data-name="Freidor Industrial">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--hot">01 · Zona Caliente</span>
+              <div class="equip-card__icon" aria-hidden="true">🍟</div>
+            </div>
+            <h3 class="equip-card__title">Freidor Industrial</h3>
+            <p class="equip-card__desc">Alta recuperación térmica en acero inoxidable para frituras crocantes y continuas en alto volumen.</p>
+            <div class="equip-card__meta">
+              <span>Acero Inoxidable</span>
+              <span>Alto Rendimiento</span>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Freidor Industrial">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <article class="equip-card" data-zone="caliente" data-id="estufa" data-name="Estufa Industrial (2, 4 o 6 puestos)">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--hot">01 · Zona Caliente</span>
+              <div class="equip-card__icon" aria-hidden="true">🔥</div>
+            </div>
+            <h3 class="equip-card__title">Estufa Industrial</h3>
+            <p class="equip-card__desc">Quemadores industriales de alta potencia adaptados al tamaño de tu cocina o stand de evento.</p>
+            <div class="equip-card__options" aria-label="Configuración de puestos">
+              <label class="option-pill"><input type="radio" name="estufa_puestos" value="2 puestos" checked /> 2 puestos</label>
+              <label class="option-pill"><input type="radio" name="estufa_puestos" value="4 puestos" /> 4 puestos</label>
+              <label class="option-pill"><input type="radio" name="estufa_puestos" value="6 puestos" /> 6 puestos</label>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Estufa Industrial" data-option-group="estufa_puestos">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <article class="equip-card" data-zone="caliente" data-id="plancha" data-name="Plancha Profesional">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--hot">01 · Zona Caliente</span>
+              <div class="equip-card__icon" aria-hidden="true">🍔</div>
+            </div>
+            <h3 class="equip-card__title">Plancha Profesional</h3>
+            <p class="equip-card__desc">Distribución uniforme de calor para hamburguesas, carnes, desayunos y sellado rápido.</p>
+            <div class="equip-card__meta">
+              <span>Calor Uniforme</span>
+              <span>Uso Pesado</span>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Plancha Profesional">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <article class="equip-card" data-zone="caliente" data-id="parrilla" data-name="Parrilla Industrial">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--hot">01 · Zona Caliente</span>
+              <div class="equip-card__icon" aria-hidden="true">🥩</div>
+            </div>
+            <h3 class="equip-card__title">Parrilla Industrial</h3>
+            <p class="equip-card__desc">Ideal para asados, cortes de carne, chorizos y conceptos parrilleros en locales o festivales.</p>
+            <div class="equip-card__meta">
+              <span>Parrilla en Acero/Hierro</span>
+              <span>Alto Tráfico</span>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Parrilla Industrial">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <article class="equip-card" data-zone="caliente" data-id="bano-maria" data-name="Baño María Industrial">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--hot">01 · Zona Caliente</span>
+              <div class="equip-card__icon" aria-hidden="true">🍲</div>
+            </div>
+            <h3 class="equip-card__title">Baño María</h3>
+            <p class="equip-card__desc">Conserva salsas, sopas, proteínas y guarniciones a la temperatura exacta de servicio sin resecar.</p>
+            <div class="equip-card__meta">
+              <span>Control Térmico</span>
+              <span>Servicio Ágil</span>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Baño María">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <article class="equip-card" data-zone="caliente" data-id="horno" data-name="Horno Multipropósito / Pizzero / Panadero">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--hot">01 · Zona Caliente</span>
+              <div class="equip-card__icon" aria-hidden="true">🍕</div>
+            </div>
+            <h3 class="equip-card__title">Horno Especializado</h3>
+            <p class="equip-card__desc">Elige entre horno multipropósito, horno pizzero de alta temperatura u horno panadero.</p>
+            <div class="equip-card__options" aria-label="Tipo de horno">
+              <label class="option-pill"><input type="radio" name="horno_tipo" value="Multipropósito" checked /> Multipropósito</label>
+              <label class="option-pill"><input type="radio" name="horno_tipo" value="Pizzero" /> Pizzero</label>
+              <label class="option-pill"><input type="radio" name="horno_tipo" value="Panadero" /> Panadero</label>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Horno" data-option-group="horno_tipo">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <!-- ZONA 02: FRÍA -->
+          <article class="equip-card" data-zone="fria" data-id="nevera-vertical" data-name="Nevera Vertical Industrial">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--cold">02 · Zona Fría</span>
+              <div class="equip-card__icon" aria-hidden="true">🧊</div>
+            </div>
+            <h3 class="equip-card__title">Nevera Vertical</h3>
+            <p class="equip-card__desc">Refrigeración comercial confiable para conservación óptima de insumos frescos y mise en place.</p>
+            <div class="equip-card__meta">
+              <span>Refrigeración Continua</span>
+              <span>Gran Capacidad</span>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Nevera Vertical">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <article class="equip-card" data-zone="fria" data-id="congelador-horizontal" data-name="Congelador Horizontal Tipo Paletero">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--cold">02 · Zona Fría</span>
+              <div class="equip-card__icon" aria-hidden="true">❄️</div>
+            </div>
+            <h3 class="equip-card__title">Congelador Horizontal Tipo Paletero</h3>
+            <p class="equip-card__desc">Congelación profunda para almacenamiento seguro de proteínas, pre-listos y congelados.</p>
+            <div class="equip-card__meta">
+              <span>Tipo Paletero</span>
+              <span>Bajo Consumo</span>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Congelador Horizontal Tipo Paletero">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <!-- ZONA 03: TRABAJO -->
+          <article class="equip-card" data-zone="trabajo" data-id="mesones" data-name="Mesones de Trabajo en Acero">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--work">03 · Zona de Trabajo</span>
+              <div class="equip-card__icon" aria-hidden="true">🔪</div>
+            </div>
+            <h3 class="equip-card__title">Mesones de Trabajo</h3>
+            <p class="equip-card__desc">Superficies higiénicas en acero inoxidable para preparación, alistamiento y emplatado.</p>
+            <div class="equip-card__options" aria-label="Cantidad de mesones">
+              <label class="option-pill"><input type="radio" name="mesones_qty" value="1 mesón" /> 1 mesón</label>
+              <label class="option-pill"><input type="radio" name="mesones_qty" value="2 mesones" /> 2 mesones</label>
+              <label class="option-pill"><input type="radio" name="mesones_qty" value="Hasta 3 mesones" checked /> Hasta 3 mesones</label>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Mesones de Trabajo" data-option-group="mesones_qty">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <article class="equip-card" data-zone="trabajo" data-id="repisas" data-name="Repisas Industriales en Acero">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--work">03 · Zona de Trabajo</span>
+              <div class="equip-card__icon" aria-hidden="true">📐</div>
+            </div>
+            <h3 class="equip-card__title">Repisas de Organización</h3>
+            <p class="equip-card__desc">Optimiza la altura de tu cocina con hasta 4 repisas en acero para utensilios, menaje e insumos secos.</p>
+            <div class="equip-card__options" aria-label="Cantidad de repisas">
+              <label class="option-pill"><input type="radio" name="repisas_qty" value="2 repisas" /> 2 repisas</label>
+              <label class="option-pill"><input type="radio" name="repisas_qty" value="Hasta 4 repisas" checked /> Hasta 4 repisas</label>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Repisas Industriales" data-option-group="repisas_qty">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <article class="equip-card" data-zone="trabajo" data-id="lavaplatos" data-name="Lavaplatos Industrial">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--work">03 · Zona de Trabajo</span>
+              <div class="equip-card__icon" aria-hidden="true">🚰</div>
+            </div>
+            <h3 class="equip-card__title">Lavaplatos Industrial</h3>
+            <p class="equip-card__desc">Poceta profunda en acero inoxidable cumpliendo estándares sanitarios para lavado ágil.</p>
+            <div class="equip-card__meta">
+              <span>1 Lavaplatos Industrial</span>
+              <span>Norma Sanitaria</span>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Lavaplatos Industrial">
+              <span class="btn-add-equip__text">+ Agregar a mi cotización</span>
+            </button>
+          </article>
+
+          <article class="equip-card equip-card--pack" data-zone="trabajo" data-id="cocina-completa" data-name="Pack Cocina Completa (3 Zonas)">
+            <div class="equip-card__top">
+              <span class="equip-card__zone equip-card__zone--pack">Pack Integral</span>
+              <div class="equip-card__icon" aria-hidden="true">⭐</div>
+            </div>
+            <h3 class="equip-card__title">Cocina Completa (Hasta 25 m²)</h3>
+            <p class="equip-card__desc">¿Necesitas montar todo tu punto desde cero? Solicita el paquete integral con Zona Caliente, Fría y de Trabajo.</p>
+            <div class="equip-card__meta">
+              <span>Llave en Mano</span>
+              <span>Asesoría Gratuita</span>
+            </div>
+            <button type="button" class="btn-add-equip" data-toggle-equip="Pack Cocina Completa (Hasta 25m²)">
+              <span class="btn-add-equip__text">+ Agregar Pack Completo</span>
+            </button>
+          </article>
+        </div>
+
+        <!-- Resumen de cotización rápida debajo del catálogo -->
+        <div class="catalog-cta-bar">
+          <div class="catalog-cta-bar__info">
+            <strong>¿Ya elegiste tus equipos o prefieres que te asesoremos desde cero?</strong>
+            <p id="catalog-selection-status">No has seleccionado equipos aún, pero puedes pedir asesoría directa.</p>
+          </div>
+          <div class="catalog-cta-bar__buttons">
+            <button type="button" class="btn btn--primary btn--lg" id="send-whatsapp-quote">
+              Enviar selección por WhatsApp
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 2 11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS (LOS 5 PILARES) -->
+    <section class="section" id="beneficios">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Por Qué Elegir Fox Kitchens</span>
+          <h2 class="section-title">Nuestros Beneficios</h2>
+          <p class="section-desc max-w-680 mx-auto">
+            Eliminamos las barreras financieras y operativas para que te concentres en cocinar, vender y hacer crecer tu marca.
+          </p>
+        </div>
+
+        <div class="benefits-bento">
+          <article class="benefit-card">
+            <span class="benefit-card__num">01</span>
+            <div class="benefit-card__icon">💰</div>
+            <h3 class="benefit-card__title">Baja inversión</h3>
+            <p class="benefit-card__desc">
+              Ahorra costos en la inversión inicial de tu restaurante o evento al no tener que descapitalizarte comprando los equipos de contado.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-card__num">02</span>
+            <div class="benefit-card__icon">🔄</div>
+            <h3 class="benefit-card__title">Cambio de equipos</h3>
+            <p class="benefit-card__desc">
+              ¿Nuevos platos en el menú o diferentes necesidades? Puedes solicitar el cambio de los equipos de tu cocina las veces que lo requieras.
+            </p>
+          </article>
+
+          <article class="benefit-card benefit-card--featured">
+            <span class="benefit-card__num">03</span>
+            <div class="benefit-card__icon">⚡</div>
+            <h3 class="benefit-card__title">Facilidad y agilidad</h3>
+            <p class="benefit-card__desc">
+              <strong>No necesitas fiadores ni aseguradoras</strong> para solicitar tu cocina. El proceso de solicitud, el envío y la instalación es rápido y eficiente en todo el país.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-card__num">04</span>
+            <div class="benefit-card__icon">🔓</div>
+            <h3 class="benefit-card__title">Sin cláusulas</h3>
+            <p class="benefit-card__desc">
+              Entendemos que al emprender muchas cosas pueden pasar; por eso nuestro servicio <strong>no incluye cláusulas de permanencia</strong>.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-card__num">05</span>
+            <div class="benefit-card__icon">🏭</div>
+            <h3 class="benefit-card__title">Variedad de equipos</h3>
+            <p class="benefit-card__desc">
+              Contamos con una gran variedad de equipos industriales para el montaje completo de cada una de las zonas de tu cocina o evento.
+            </p>
+          </article>
+
+          <article class="benefit-card benefit-card--featured">
+            <span class="benefit-card__num">06</span>
+            <div class="benefit-card__icon">📅</div>
+            <h3 class="benefit-card__title">Alquiler por días</h3>
+            <p class="benefit-card__desc">
+              No necesitas atarte a mensualidades ni contratos largos. <strong>Alquila bajo necesidad por pocos días</strong> para festivales, conciertos, ferias o eventos temporales.
+            </p>
+          </article>
+        </div>
+
+        <div class="benefits-cta-banner">
+          <div class="benefits-cta-banner__text">
+            <h3>¿Listo para abrir tu negocio o equipar tu próximo evento?</h3>
+            <p>Habla directamente con un asesor de Fox Kitchens y recibe una propuesta a tu medida hoy mismo.</p>
+          </div>
+          <a href="#contacto" class="btn btn--primary btn--lg">Solicitar Asesoría Gratis</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS / CLIENTES SATISFECHOS -->
+    <section class="section section--navy" id="testimonios">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow section-eyebrow--light">Clientes Satisfechos</span>
+          <h2 class="section-title section-title--light">Lo que dicen de nosotros</h2>
+          <p class="section-desc section-desc--light max-w-680 mx-auto">
+            Emprendedores gastronómicos, restaurantes en expansión y cocinas ocultas que ya operan con Fox Kitchens.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card" data-testimonial-brand="juan-criollo">
+            <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              “Pude abrir mi restaurante de comida típica colombiana gracias a este modelo de alquiler de cocinas, me instalaron todos los equipos y todo fue muy rápido, gracias.”
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="author-logo-badge">
+                <img src="assets/img/clients/juan-criollo.svg" alt="Logo Juan Criollo" loading="lazy" />
+              </div>
+              <div>
+                <strong class="author-name">Marco García</strong>
+                <span class="author-biz">Juan Criollo · Comida Típica</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-testimonial-brand="cortes">
+            <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              “Expandí mi restaurante de comida mexicana y pude abrir dos nuevos puntos mucho más rápido gracias al alquiler de cocinas, es una excelente opción.”
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="author-logo-badge">
+                <img src="assets/img/clients/cortes.svg" alt="Logo Restaurante Cortés" loading="lazy" />
+              </div>
+              <div>
+                <strong class="author-name">Miguel Rodríguez</strong>
+                <span class="author-biz">Restaurante Cortés · Expansión</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-testimonial-brand="salvador">
+            <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              “Tengo un restaurante de cocina oculta, pude abrir mi negocio con muy poco capital, sin arriesgar mucho desde el comienzo, los equipos funcionan 10/10.”
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="author-logo-badge">
+                <img src="assets/img/clients/salvador.svg" alt="Logo Salvador Cocina Oculta" loading="lazy" />
+              </div>
+              <div>
+                <strong class="author-name">Andrés Varón</strong>
+                <span class="author-biz">Salvador Cocina Oculta · Dark Kitchen</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CLIENT LOGOS SHOWCASE (IDEA 1 + IDEA 3) -->
+        <div class="clients-showcase">
+          <div class="clients-showcase__header">
+            <div class="clients-showcase__title-wrap">
+              <span class="clients-showcase__dot"></span>
+              <h3 class="clients-showcase__title">Clientes satisfechos que cocinan con Fox Kitchens</h3>
+            </div>
+            <p class="clients-showcase__hint">Pasa el cursor o toca una marca para conocer su proyecto</p>
+          </div>
+
+          <div class="clients-marquee" id="clients-marquee">
+            <div class="clients-marquee__track">
+              <!-- Set 1 -->
+              <button type="button" class="client-pill" data-client-brand="juan-criollo">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/juan-criollo.svg" alt="Juan Criollo Sabor Colombiano" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Comida Típica · Ver Testimonio ↑</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="bohemio">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/bohemio.svg" alt="Bohemio Lounge & Bar" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Lounge & Bar · Cocina Equipada</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="cortes">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/cortes.svg" alt="Restaurante Cortés" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Comida Mexicana · Ver Testimonio ↑</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="kokoa">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/kokoa.svg" alt="Kokoa" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Restaurante · Equipos en Alquiler</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="salvador">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/salvador.svg" alt="Salvador Cocina Oculta" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Cocina Oculta · Ver Testimonio ↑</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="london">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/london.svg" alt="London House Pub" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Gastro Pub · Cocina Industrial</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="fresko">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/fresko.svg" alt="Fresko" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Gastronomía · Punto Equipado</span>
+              </button>
+
+              <!-- Set 2 (Duplicate for seamless infinite loop) -->
+              <button type="button" class="client-pill" data-client-brand="juan-criollo" aria-hidden="true" tabindex="-1">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/juan-criollo.svg" alt="" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Comida Típica · Ver Testimonio ↑</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="bohemio" aria-hidden="true" tabindex="-1">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/bohemio.svg" alt="" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Lounge & Bar · Cocina Equipada</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="cortes" aria-hidden="true" tabindex="-1">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/cortes.svg" alt="" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Comida Mexicana · Ver Testimonio ↑</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="kokoa" aria-hidden="true" tabindex="-1">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/kokoa.svg" alt="" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Restaurante · Equipos en Alquiler</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="salvador" aria-hidden="true" tabindex="-1">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/salvador.svg" alt="" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Cocina Oculta · Ver Testimonio ↑</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="london" aria-hidden="true" tabindex="-1">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/london.svg" alt="" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Gastro Pub · Cocina Industrial</span>
+              </button>
+
+              <button type="button" class="client-pill" data-client-brand="fresko" aria-hidden="true" tabindex="-1">
+                <div class="client-pill__logo-wrap">
+                  <img src="assets/img/clients/fresko.svg" alt="" loading="lazy" />
+                </div>
+                <span class="client-pill__tag">Gastronomía · Punto Equipado</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO Y FORMULARIO DIRECTO A WHATSAPP -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <span class="section-eyebrow">Contacto Directo</span>
+            <h2 class="section-title">Solicita tu asesoría gratuita ahora</h2>
+            <p class="section-desc">
+              Cuéntanos qué tipo de proyecto tienes (restaurante, cocina oculta, Food Truck o evento por días) y en qué ciudad estás. Te responderemos de inmediato por WhatsApp.
+            </p>
+
+            <div class="contact-cards">
+              <div class="contact-item">
+                <div class="contact-item__icon">📱</div>
+                <div>
+                  <strong>Líneas Celulares y WhatsApp</strong>
+                  <div class="contact-phones">
+                    <a href="https://wa.me/573185778389" target="_blank" rel="noopener">318 577 8389</a>
+                    <span>·</span>
+                    <a href="tel:+573182919369">318 291 9369</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">✉️</div>
+                <div>
+                  <strong>Correo Electrónico</strong>
+                  <p><a href="mailto:foxfinancialsconsultores@gmail.com">foxfinancialsconsultores@gmail.com</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">📍</div>
+                <div>
+                  <strong>Cobertura</strong>
+                  <p>Despachos e instalación para negocios y eventos en todo el país.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-box">
+            <form id="whatsapp-lead-form" class="lead-form">
+              <h3 class="lead-form__title">Configura tu solicitud rápida</h3>
+
+              <div class="form-group">
+                <label for="lead-name">Tu Nombre o Nombre de tu Marca *</label>
+                <input type="text" id="lead-name" name="name" required placeholder="Ej. Carlos Gómez / Burger Fest" />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="lead-city">Ciudad *</label>
+                  <input type="text" id="lead-city" name="city" required placeholder="Ej. Bogotá, Medellín, Cali..." />
+                </div>
+
+                <div class="form-group">
+                  <label for="lead-modality">Tipo de Proyecto *</label>
+                  <select id="lead-modality" name="modality" required>
+                    <option value="Restaurante con servicio al público">Restaurante al público</option>
+                    <option value="Cocina Oculta (Dark Kitchen)">Cocina Oculta (Dark Kitchen)</option>
+                    <option value="Food Truck">Food Truck</option>
+                    <option value="Evento por pocos días (Festival / Concierto / Feria)">Evento por días (Festival / Feria / Concierto)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="lead-items">Equipos seleccionados (puedes agregar más arriba o escribir aquí)</label>
+                <textarea id="lead-items" name="items" rows="3" placeholder="Selecciona equipos en el catálogo o escribe cuáles necesitas (ej. 2 freidores, 1 plancha y 1 nevera para 4 días)..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--lg btn--full">
+                Enviar Solicitud a WhatsApp
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+              <p class="lead-form__note">Sin compromiso · Respuesta inmediata · Cero cláusulas de permanencia</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Uses Negative Logo on Dark Navy Background) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo-negative.png" alt="Fox Kitchens Logo Versión Negativa" class="footer__logo" width="180" height="72" loading="lazy" />
+          <p class="footer__desc">
+            Alquiler de equipos industriales y profesionales de cocina para restaurantes, cocinas ocultas, Food Trucks, festivales, conciertos y ferias en todo el país.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#modalidades">Modalidades de Alquiler</a></li>
+            <li><a href="#equipos">Catálogo por Zonas</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Zonas de Cocina</h4>
+          <ul>
+            <li><a href="#equipos" data-footer-zone="caliente">01. Zona Caliente</a></li>
+            <li><a href="#equipos" data-footer-zone="fria">02. Zona Fría</a></li>
+            <li><a href="#equipos" data-footer-zone="trabajo">03. Zona de Trabajo</a></li>
+            <li><a href="#contacto">Solicitar Asesoría Gratis</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contacto Directo</h4>
+          <ul class="footer__contact-list">
+            <li><a href="https://wa.me/573185778389" target="_blank" rel="noopener">WhatsApp: 318 577 8389</a></li>
+            <li><a href="tel:+573182919369">Cel: 318 291 9369</a></li>
+            <li><a href="mailto:foxfinancialsconsultores@gmail.com">foxfinancialsconsultores@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span id="current-year">2026</span> Fox Kitchens. Todos los derechos reservados.</p>
+        <a href="https://orbitagencia.com" target="_blank" rel="noopener" class="footer__agency-btn" aria-label="Visitar sitio web de Órbita Agencia">
+          <span>Diseñado y desarrollado por</span>
+          <strong>Órbita Agencia</strong>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PERSISTENT FLOATING AUDIO CONTROL (Visible while video plays and user scrolls down) -->
+  <button type="button" class="floating-sound-pill" id="floating-sound-pill" aria-hidden="true" aria-label="Activar o desactivar audio del video promocional" title="Activar / desactivar audio">
+    <svg class="icon-unmuted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+    </svg>
+    <svg class="icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+  </button>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/573185778389?text=Hola%20Fox%20Kitchens%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20el%20alquiler%20de%20equipos%20de%20cocina." target="_blank" rel="noopener" class="float-wa" aria-label="Chatear por WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.004 3.2c-7.068 0-12.8 5.73-12.8 12.798 0 2.257.59 4.46 1.71 6.404L3.1 28.8l6.557-1.72a12.76 12.76 0 0 0 6.342 1.692h.005c7.067 0 12.796-5.73 12.796-12.798a12.717 12.717 0 0 0-3.746-9.05A12.712 12.712 0 0 0 16.004 3.2zm0 23.413h-.004a10.6 10.6 0 0 1-5.402-1.479l-.388-.23-3.89 1.02 1.038-3.792-.252-.4a10.588 10.588 0 0 1-1.628-5.646c0-5.862 4.77-10.631 10.634-10.631 2.84 0 5.51 1.107 7.517 3.116a10.563 10.563 0 0 1 3.112 7.52c0 5.863-4.77 10.632-10.737 10.632zm5.833-7.959c-.32-.16-1.892-.934-2.185-1.04-.293-.107-.506-.16-.72.16-.213.32-.826 1.04-1.013 1.253-.186.214-.373.24-.693.08-.32-.16-1.35-.498-2.572-1.587-.95-.848-1.592-1.895-1.778-2.215-.187-.32-.02-.493.14-.653.144-.143.32-.373.48-.56.16-.186.213-.32.32-.533.107-.213.053-.4-.027-.56-.08-.16-.72-1.734-.986-2.374-.26-.624-.525-.54-.72-.55l-.613-.01c-.213 0-.56.08-.853.4-.293.32-1.12 1.094-1.12 2.668 0 1.573 1.146 3.094 1.306 3.307.16.214 2.256 3.445 5.465 4.83.764.33 1.36.527 1.824.674.766.244 1.464.21 2.016.127.615-.092 1.892-.773 2.159-1.52.266-.747.266-1.387.186-1.52-.08-.133-.293-.213-.613-.373z"/>
+    </svg>
+    <span class="float-wa__tooltip">¡Cotiza por WhatsApp!</span>
+  </a>
+
+  <!-- QUOTE DRAWER MODAL -->
+  <div class="quote-drawer" id="quote-drawer" aria-hidden="true">
+    <div class="quote-drawer__backdrop" id="close-quote-backdrop"></div>
+    <div class="quote-drawer__panel" role="dialog" aria-labelledby="drawer-title">
+      <div class="quote-drawer__header">
+        <h3 id="drawer-title">Tu Selección de Equipos</h3>
+        <button type="button" class="quote-drawer__close" id="close-quote-drawer" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="quote-drawer__body">
+        <p class="quote-drawer__helper">Selecciona los equipos que necesitas para tu restaurante, cocina oculta, Food Truck o evento por días:</p>
+        <ul class="quote-drawer__list" id="quote-drawer-list"></ul>
+      </div>
+      <div class="quote-drawer__footer">
+        <button type="button" class="btn btn--primary btn--full" id="drawer-proceed-btn">
+          Continuar con mi solicitud
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

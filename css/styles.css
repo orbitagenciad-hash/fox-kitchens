@@ -55,6 +55,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -62,7 +65,9 @@ body {
   color: var(--text-main);
   background-color: var(--bg-white);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -387,9 +392,15 @@ textarea {
 .hero__grid {
   position: relative;
   display: grid;
-  grid-template-columns: 1.12fr 0.88fr;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
   gap: 48px;
   align-items: center;
+}
+
+.hero__content,
+.hero__visual {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .pill-badge {
@@ -405,6 +416,7 @@ textarea {
   font-weight: 700;
   font-size: 0.86rem;
   margin-bottom: 22px;
+  max-width: 100%;
 }
 
 .hero__title {
@@ -703,12 +715,24 @@ textarea {
   padding: 9px 13px;
   border-radius: 10px;
   width: max-content;
-  max-width: 220px;
+  max-width: 210px;
   text-align: left;
   opacity: 0;
   pointer-events: none;
   transition: all var(--transition);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Keep left and right hotspot cards strictly inside the 3D viewport */
+.hotspot--work .hotspot__card {
+  left: -12px;
+  transform: translateX(0) translateY(6px);
+}
+
+.hotspot--cold .hotspot__card {
+  left: auto;
+  right: -12px;
+  transform: translateX(0) translateY(6px);
 }
 
 .hotspot__card strong {
@@ -730,6 +754,13 @@ textarea {
 .hotspot.active .hotspot__card {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+.hotspot--work:hover .hotspot__card,
+.hotspot--work.active .hotspot__card,
+.hotspot--cold:hover .hotspot__card,
+.hotspot--cold.active .hotspot__card {
+  transform: translateX(0) translateY(0);
 }
 
 .hotspot:hover .hotspot__pin,
@@ -813,18 +844,13 @@ textarea {
   margin: 0;
 }
 
-/* Bottom Live Caption Pill inside Viewport */
+/* Live Caption Pill below 3D Viewport */
 .stage-caption-pill {
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  z-index: 7;
-  background: rgba(11, 21, 30, 0.86);
-  backdrop-filter: blur(10px);
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 12px;
-  padding: 9px 14px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -845,18 +871,19 @@ textarea {
 .stage-caption-pill__text {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.92);
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 /* Bottom Stepper Controls */
 .stage-stepper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .stage-step {
+  min-width: 0;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -2331,16 +2358,16 @@ textarea {
   .about-banner,
   .modes-grid,
   .contact-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .benefits-bento,
   .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .footer__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
   .hero-float-badge {
@@ -2350,12 +2377,44 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .topbar {
+    font-size: 0.78rem;
+    padding: 8px 0;
+  }
+
   .topbar__contacts {
     display: none;
   }
 
+  .header__inner {
+    height: 70px;
+    gap: 10px;
+  }
+
+  .header__logo {
+    height: 38px;
+  }
+
+  .header__actions {
+    gap: 8px;
+  }
+
+  #open-quote-drawer {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+
   .header__burger {
     display: flex;
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+    flex-shrink: 0;
   }
 
   .header__cta {
@@ -2364,12 +2423,12 @@ textarea {
 
   .nav {
     position: fixed;
-    top: 86px;
+    top: 70px;
     left: 0;
     right: 0;
     background-color: var(--bg-white);
     border-bottom: 1px solid var(--border-color);
-    padding: 24px;
+    padding: 22px 18px;
     box-shadow: var(--shadow-md);
     transform: translateY(-130%);
     opacity: 0;
@@ -2389,9 +2448,154 @@ textarea {
     gap: 16px;
   }
 
-  .about-banner {
-    padding: 28px 22px;
+  /* Hero Mobile */
+  .hero {
+    padding: 32px 0 52px;
+  }
+
+  .hero__grid {
     gap: 32px;
+  }
+
+  .pill-badge {
+    font-size: 0.77rem;
+    padding: 7px 12px;
+    line-height: 1.35;
+    white-space: normal;
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .hero__title {
+    font-size: clamp(1.9rem, 7.2vw, 2.4rem);
+    line-height: 1.14;
+    margin-bottom: 16px;
+    overflow-wrap: break-word;
+  }
+
+  .hero__subtitle {
+    font-size: 0.96rem;
+    line-height: 1.58;
+    margin-bottom: 24px;
+  }
+
+  .hero__cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .hero__cta-group .btn {
+    width: 100%;
+    white-space: normal;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+
+  .hero__metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    align-items: start;
+    padding-top: 20px;
+  }
+
+  .metric-divider {
+    display: none;
+  }
+
+  .metric-item__val {
+    font-size: 1.05rem;
+  }
+
+  .metric-item__label {
+    font-size: 0.74rem;
+    line-height: 1.3;
+    display: block;
+  }
+
+  /* 3D Interactive Kitchen Stage Mobile */
+  .kitchen-stage {
+    padding: 12px;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .kitchen-stage__topbar {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .stage-mode-switch {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+    border-radius: 14px;
+  }
+
+  .stage-mode-btn {
+    font-size: 0.69rem;
+    padding: 7px 4px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hotspot__pin {
+    width: 28px;
+    height: 28px;
+    font-size: 0.72rem;
+  }
+
+  .hotspot__card {
+    max-width: 165px;
+    padding: 7px 10px;
+  }
+
+  .hotspot__card strong {
+    font-size: 0.74rem;
+  }
+
+  .hotspot__card span {
+    font-size: 0.68rem;
+  }
+
+  .stage-caption-pill {
+    padding: 9px 11px;
+    gap: 6px;
+  }
+
+  .stage-caption-pill__badge {
+    font-size: 0.7rem;
+  }
+
+  .stage-caption-pill__text {
+    font-size: 0.75rem;
+  }
+
+  .stage-stepper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .stage-step {
+    padding: 8px 10px;
+  }
+
+  /* General Sections Mobile */
+  .section {
+    padding: 64px 0;
+  }
+
+  .about-banner {
+    padding: 26px 18px;
+    gap: 28px;
+    margin-bottom: 56px;
   }
 
   .about-stats-grid,
@@ -2399,7 +2603,12 @@ textarea {
   .testimonials-grid,
   .form-row,
   .footer__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mode-card,
+  .contact-form-box {
+    padding: 24px 18px;
   }
 
   .reel-card {
@@ -2408,8 +2617,50 @@ textarea {
 
   .catalog-cta-bar,
   .benefits-cta-banner {
-    padding: 24px;
+    padding: 22px 18px;
     text-align: center;
     justify-content: center;
+  }
+
+  .catalog-cta-bar__buttons,
+  .catalog-cta-bar__buttons .btn,
+  .benefits-cta-banner .btn {
+    width: 100%;
+    white-space: normal;
+  }
+
+  /* Footer & Floating Buttons Mobile */
+  .footer {
+    padding: 52px 0 92px;
+  }
+
+  .footer__grid {
+    gap: 28px;
+    padding-bottom: 32px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer__agency-btn {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .float-wa {
+    bottom: 18px;
+    right: 16px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .floating-sound-pill {
+    bottom: 22px;
+    left: 16px;
+    width: 42px;
+    height: 42px;
   }
 }

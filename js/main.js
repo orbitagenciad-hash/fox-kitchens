@@ -302,8 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
       zoneTarget: 'fria',
     },
     3: {
-      badge: 'Fase 03 · Cocina 100% Equipada',
-      text: 'Montamos Zona Caliente (Estufa, Plancha, Parrilla, Freidor y Horno). ¡Lista para producir!',
+      badge: 'Fase 03 · Zona Caliente',
+      text: 'Montamos Zona Caliente (Estufa, Plancha, Parrilla, Freidor y Horno). ¡Cocina 100% equipada!',
       zoneTarget: 'caliente',
     },
   };

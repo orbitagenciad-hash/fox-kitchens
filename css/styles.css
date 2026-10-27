@@ -2450,55 +2450,59 @@ textarea {
 
   /* Hero Mobile */
   .hero {
-    padding: 32px 0 52px;
+    padding: 40px 0 60px;
   }
 
   .hero__grid {
-    gap: 32px;
+    gap: 40px;
+  }
+
+  .hero__content {
+    padding: 0 4px;
   }
 
   .pill-badge {
     font-size: 0.77rem;
-    padding: 7px 12px;
-    line-height: 1.35;
+    padding: 8px 14px;
+    line-height: 1.4;
     white-space: normal;
-    border-radius: 14px;
-    margin-bottom: 16px;
+    border-radius: 999px;
+    margin-bottom: 22px;
   }
 
   .hero__title {
-    font-size: clamp(1.9rem, 7.2vw, 2.4rem);
-    line-height: 1.14;
-    margin-bottom: 16px;
+    font-size: clamp(1.9rem, 7.2vw, 2.38rem);
+    line-height: 1.22;
+    margin-bottom: 22px;
     overflow-wrap: break-word;
   }
 
   .hero__subtitle {
-    font-size: 0.96rem;
-    line-height: 1.58;
-    margin-bottom: 24px;
+    font-size: 0.97rem;
+    line-height: 1.68;
+    margin-bottom: 30px;
   }
 
   .hero__cta-group {
     flex-direction: column;
     width: 100%;
-    gap: 10px;
-    margin-bottom: 28px;
+    gap: 14px;
+    margin-bottom: 34px;
   }
 
   .hero__cta-group .btn {
     width: 100%;
     white-space: normal;
-    padding: 14px 18px;
-    font-size: 0.95rem;
+    padding: 15px 20px;
+    font-size: 0.96rem;
   }
 
   .hero__metrics {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    gap: 14px;
     align-items: start;
-    padding-top: 20px;
+    padding-top: 26px;
   }
 
   .metric-divider {
@@ -2507,11 +2511,12 @@ textarea {
 
   .metric-item__val {
     font-size: 1.05rem;
+    margin-bottom: 3px;
   }
 
   .metric-item__label {
-    font-size: 0.74rem;
-    line-height: 1.3;
+    font-size: 0.75rem;
+    line-height: 1.38;
     display: block;
   }
 

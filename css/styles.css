@@ -518,7 +518,15 @@ textarea {
    ========================================================================== */
 .kitchen-stage-showcase {
   max-width: 920px;
-  margin: 0 auto 68px;
+  margin: 0 auto 76px;
+}
+
+.kitchen-stage-showcase__header {
+  margin-bottom: 34px;
+}
+
+.kitchen-stage-showcase__desc {
+  max-width: 790px;
 }
 
 .kitchen-stage {

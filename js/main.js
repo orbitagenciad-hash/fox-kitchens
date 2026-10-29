@@ -464,6 +464,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let hasStartedOnScroll = false;
   let userManuallyMuted = false;
   let isReelInView = false;
+  let audioUnlockedInView = false;
+
+  if (promoVideo) {
+    promoVideo.pause();
+    promoVideo.currentTime = 0;
+    promoVideo.muted = true;
+  }
 
   function syncAudioUI() {
     if (!promoVideo) return;
@@ -490,39 +497,24 @@ document.addEventListener('DOMContentLoaded', () => {
     floatingSoundPill.setAttribute('aria-hidden', String(!shouldShow));
   }
 
-  // Pre-unlock the HTMLMediaElement on any early user gesture (click/tap/key) while above the fold,
-  // so that when IntersectionObserver fires later on scroll, promoVideo.play() with sound is allowed!
-  let mediaElementPrimed = false;
-  function primeMediaElementOnGesture() {
-    if (mediaElementPrimed || !promoVideo || userManuallyMuted) return;
+  // Only start & unmute the promo video on touch/click when the user has actually reached the video section (isReelInView === true).
+  // Never play or unmute while the user is reading the top of the page.
+  function activateVideoInViewOnGesture() {
+    if (!promoVideo || !isReelInView || audioUnlockedInView || userManuallyMuted) return;
 
     if (!hasStartedOnScroll) {
-      // Briefly play+pause inside the user gesture to bless this <video> element in Chrome/Safari
-      promoVideo.muted = false;
-      promoVideo.volume = 1;
-      const playPromise = promoVideo.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            mediaElementPrimed = true;
-            if (!hasStartedOnScroll) {
-              promoVideo.pause();
-              promoVideo.currentTime = 0;
-            }
-            syncAudioUI();
-          })
-          .catch(() => {
-            promoVideo.muted = true;
-          });
-      }
-    } else if (promoVideo.muted) {
-      // User already scrolled to the video and browser forced mute; unmute immediately on this gesture
-      promoVideo.muted = false;
-      promoVideo.volume = 1;
-      promoVideo
-        .play()
+      hasStartedOnScroll = true;
+      promoVideo.currentTime = 0;
+    }
+
+    promoVideo.muted = false;
+    promoVideo.volume = 1;
+    const playPromise = promoVideo.play();
+    if (playPromise !== undefined) {
+      playPromise
         .then(() => {
-          mediaElementPrimed = true;
+          audioUnlockedInView = true;
+          if (playIcon) playIcon.textContent = '⏸';
           syncAudioUI();
           updateFloatingPillVisibility();
         })
@@ -533,27 +525,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  ['pointerdown', 'mousedown', 'touchstart', 'keydown', 'click'].forEach((evt) => {
-    window.addEventListener(evt, primeMediaElementOnGesture, { passive: true });
+  ['pointerdown', 'touchstart', 'touchend', 'click'].forEach((evt) => {
+    window.addEventListener(evt, activateVideoInViewOnGesture, { passive: true });
   });
 
   async function startVideoWithAudio() {
     if (!promoVideo || hasStartedOnScroll) return;
     hasStartedOnScroll = true;
+    promoVideo.currentTime = 0;
     promoVideo.volume = 1;
 
     try {
       promoVideo.muted = false;
       await promoVideo.play();
+      audioUnlockedInView = true;
       if (playIcon) playIcon.textContent = '⏸';
     } catch {
-      // Browser blocked unmuted autoplay because user only scrolled with mouse wheel and hasn't clicked anything yet
+      // Browser blocked unmuted autoplay until user touches inside this section; play muted until touch in view
       promoVideo.muted = true;
       try {
         await promoVideo.play();
         if (playIcon) playIcon.textContent = '⏸';
       } catch {
-        // Ignore
+        // Wait for touch gesture while in view
       }
     }
     syncAudioUI();
@@ -565,6 +559,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!promoVideo) return;
 
     if (promoVideo.muted || promoVideo.paused) {
+      hasStartedOnScroll = true;
+      audioUnlockedInView = true;
       promoVideo.muted = false;
       promoVideo.volume = 1;
       userManuallyMuted = false;

@@ -1098,7 +1098,7 @@ textarea {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 48px;
-  margin-bottom: 84px;
+  margin-bottom: 0;
 }
 
 .about-stats-grid {
@@ -1357,7 +1357,40 @@ textarea {
   display: none;
 }
 
-/* Modalidades Grid */
+/* Modalidades Section & Grid (Dark Navy Module) */
+.section--navy-modes {
+  position: relative;
+  background: linear-gradient(135deg, #042437 0%, #063B59 55%, #084C72 100%);
+  overflow: hidden;
+}
+
+.section--navy-modes__glow {
+  position: absolute;
+  top: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 780px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255, 85, 0, 0.2) 0%, rgba(242, 122, 33, 0.06) 48%, transparent 72%);
+  pointer-events: none;
+}
+
+.modes-block {
+  position: relative;
+  z-index: 1;
+}
+
+.modes-script-eyebrow {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2.7vw, 2.3rem);
+  line-height: 1.25;
+  color: #FF823A;
+  margin-bottom: 12px;
+}
+
 .modes-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1369,7 +1402,7 @@ textarea {
   border-radius: var(--radius-lg);
   padding: 38px;
   border: 2px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 20px 45px rgba(2, 18, 28, 0.28);
   display: flex;
   flex-direction: column;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
@@ -2947,7 +2980,12 @@ textarea {
   .about-banner {
     padding: 26px 18px;
     gap: 28px;
-    margin-bottom: 56px;
+    margin-bottom: 0;
+  }
+
+  .modes-script-eyebrow {
+    font-size: clamp(1.32rem, 5.4vw, 1.65rem);
+    margin-bottom: 10px;
   }
 
   .about-stats-grid,

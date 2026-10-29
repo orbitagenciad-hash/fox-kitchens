@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..600&family=Outfit:wght@500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=6" />
+  <link rel="stylesheet" href="css/styles.css?v=7" />
 </head>
 <body>
 
@@ -457,32 +457,75 @@
           </div>
         </div>
 
-        <div class="section-header text-center">
-          <span class="section-eyebrow">Catálogo Profesional</span>
-          <h2 class="section-title">Los equipos que tenemos para ti</h2>
-          <p class="section-desc max-w-680 mx-auto">
-            Explora nuestras <strong>3 zonas de equipamiento industrial</strong>. Haz clic en los equipos que necesitas para armar tu solicitud de cotización personalizada en segundos.
-          </p>
-        </div>
+        <!-- Featured Catalog Header Banner + Zone Cards (Option 1 + Option 2) -->
+        <div class="catalog-hero-box" id="catalogo-equipos">
+          <div class="catalog-hero-box__glow" aria-hidden="true"></div>
+          <div class="catalog-hero-box__header text-center">
+            <div class="catalog-hero-box__badge">
+              <span>🔥</span>
+              <span>Catálogo Profesional · 12 Equipos en Acero Inoxidable</span>
+            </div>
+            <h2 class="catalog-hero-box__title">
+              Los equipos profesionales <span class="text-italic-orange">que tenemos para ti</span>
+            </h2>
+            <p class="catalog-hero-box__desc">
+              Explora nuestras <strong>3 zonas de equipamiento industrial</strong>. Haz clic en los equipos que necesitas para armar tu solicitud de cotización personalizada en segundos.
+            </p>
 
-        <!-- Tabs Navigation -->
-        <div class="zones-tabs" role="tablist" aria-label="Zonas de cocina">
-          <button type="button" class="zone-tab active" role="tab" aria-selected="true" data-zone-filter="all">
-            <span class="zone-tab__num">✦</span>
-            <span class="zone-tab__name">Todas las Zonas (12)</span>
-          </button>
-          <button type="button" class="zone-tab" role="tab" aria-selected="false" data-zone-filter="caliente">
-            <span class="zone-tab__num">01</span>
-            <span class="zone-tab__name">🔥 Zona Caliente</span>
-          </button>
-          <button type="button" class="zone-tab" role="tab" aria-selected="false" data-zone-filter="fria">
-            <span class="zone-tab__num">02</span>
-            <span class="zone-tab__name">❄️ Zona Fría</span>
-          </button>
-          <button type="button" class="zone-tab" role="tab" aria-selected="false" data-zone-filter="trabajo">
-            <span class="zone-tab__num">03</span>
-            <span class="zone-tab__name">🛠️ Zona de Trabajo</span>
-          </button>
+            <!-- 3-Step Quick Guide -->
+            <div class="catalog-steps-bar" aria-label="Pasos para cotizar">
+              <div class="catalog-step-pill">
+                <span class="catalog-step-pill__num">1</span>
+                <span class="catalog-step-pill__text">Elige tu zona operativa</span>
+              </div>
+              <span class="catalog-step-arrow" aria-hidden="true">→</span>
+              <div class="catalog-step-pill">
+                <span class="catalog-step-pill__num">2</span>
+                <span class="catalog-step-pill__text">Agrega los equipos que necesitas</span>
+              </div>
+              <span class="catalog-step-arrow" aria-hidden="true">→</span>
+              <div class="catalog-step-pill">
+                <span class="catalog-step-pill__num">3</span>
+                <span class="catalog-step-pill__text">Envía tu lista por WhatsApp</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Visual Zone Selector Cards -->
+          <div class="zones-tabs" role="tablist" aria-label="Zonas de cocina">
+            <button type="button" class="zone-tab active" role="tab" aria-selected="true" data-zone-filter="all">
+              <div class="zone-tab__top">
+                <span class="zone-tab__num">✦ Catálogo Completo</span>
+                <span class="zone-tab__icon" aria-hidden="true">🍽️</span>
+              </div>
+              <span class="zone-tab__name">Todas las Zonas (12)</span>
+              <span class="zone-tab__sub">Ver todos los equipos disponibles para tu proyecto</span>
+            </button>
+            <button type="button" class="zone-tab" role="tab" aria-selected="false" data-zone-filter="caliente">
+              <div class="zone-tab__top">
+                <span class="zone-tab__num">Zona 01</span>
+                <span class="zone-tab__icon" aria-hidden="true">🔥</span>
+              </div>
+              <span class="zone-tab__name">Zona Caliente (6)</span>
+              <span class="zone-tab__sub">Freidor, plancha, parrilla, estufa, horno y baño maría</span>
+            </button>
+            <button type="button" class="zone-tab" role="tab" aria-selected="false" data-zone-filter="fria">
+              <div class="zone-tab__top">
+                <span class="zone-tab__num">Zona 02</span>
+                <span class="zone-tab__icon" aria-hidden="true">❄️</span>
+              </div>
+              <span class="zone-tab__name">Zona Fría (2)</span>
+              <span class="zone-tab__sub">Nevera vertical y congelador industrial horizontal</span>
+            </button>
+            <button type="button" class="zone-tab" role="tab" aria-selected="false" data-zone-filter="trabajo">
+              <div class="zone-tab__top">
+                <span class="zone-tab__num">Zona 03</span>
+                <span class="zone-tab__icon" aria-hidden="true">🛠️</span>
+              </div>
+              <span class="zone-tab__name">Zona de Trabajo (4)</span>
+              <span class="zone-tab__sub">Mesones en acero, repisas aéreas, lavaplatos y campana</span>
+            </button>
+          </div>
         </div>
 
         <!-- Equipment Grid (Rendered / Enhanced by JS, with static SEO fallback) -->

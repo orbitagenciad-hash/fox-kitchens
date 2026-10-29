@@ -1027,6 +1027,12 @@ textarea {
   margin-bottom: 52px;
 }
 
+@media (min-width: 1025px) {
+  #modalidades .section-desc {
+    max-width: 730px;
+  }
+}
+
 .section-eyebrow {
   display: inline-block;
   font-family: var(--font-heading);

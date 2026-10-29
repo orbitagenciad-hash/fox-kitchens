@@ -443,8 +443,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const info = STEP_DATA[step];
       if (info && info.zoneTarget) {
         filterByZone(info.zoneTarget);
-        const eqSection = document.getElementById('equipos');
-        if (eqSection) eqSection.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });

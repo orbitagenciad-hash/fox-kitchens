@@ -1360,7 +1360,7 @@ textarea {
 /* Modalidades Section & Grid (Dark Navy Module) */
 .section--navy-modes {
   position: relative;
-  background-color: var(--fox-navy-dark);
+  background: linear-gradient(135deg, var(--fox-navy) 0%, var(--fox-navy-dark) 100%);
   overflow: hidden;
 }
 

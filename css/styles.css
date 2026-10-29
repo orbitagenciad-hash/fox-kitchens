@@ -3023,6 +3023,57 @@ textarea {
     white-space: normal;
   }
 
+  /* Mobile-Only Scroll Slide-In (Left -> Right) for Benefits Cards + Subtle Bounce on Final CTA */
+  .benefit-card.mobile-scroll-card,
+  .benefits-cta-banner.mobile-scroll-card {
+    opacity: 0;
+    transform: translate3d(-64px, 0, 0);
+    transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .benefit-card.mobile-scroll-card.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .benefits-cta-banner.mobile-scroll-card.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    animation: benefit-cta-enter 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+               benefit-cta-subtle-bounce 2.4s ease-in-out 0.65s infinite;
+  }
+
+  @keyframes benefit-cta-enter {
+    0% {
+      opacity: 0;
+      transform: translate3d(-64px, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes benefit-cta-subtle-bounce {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    28% {
+      transform: translate3d(0, -7px, 0);
+    }
+    48% {
+      transform: translate3d(0, 0, 0);
+    }
+    66% {
+      transform: translate3d(0, -3.5px, 0);
+    }
+    84% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
   /* Footer & Floating Buttons Mobile */
   .footer {
     padding: 52px 0 92px;

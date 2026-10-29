@@ -713,6 +713,31 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('mouseleave', clearBrandHighlight);
   });
 
+  // 9. Mobile Scroll Animation for Benefits Section (Slide Left->Right + Subtle Bounce on CTA)
+  const benefitScrollItems = document.querySelectorAll('#beneficios .benefit-card, #beneficios .benefits-cta-banner');
+  if (benefitScrollItems.length > 0 && 'IntersectionObserver' in window) {
+    benefitScrollItems.forEach((el) => el.classList.add('mobile-scroll-card'));
+
+    const benefitObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else if (entry.boundingClientRect.top > 0) {
+            // Reset only when element is below the viewport so scrolling down replays the entrance smoothly
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      },
+      {
+        threshold: 0.16,
+        rootMargin: '0px 0px -24px 0px',
+      }
+    );
+
+    benefitScrollItems.forEach((el) => benefitObserver.observe(el));
+  }
+
   // Initial sync
   syncSelectionUI();
 });

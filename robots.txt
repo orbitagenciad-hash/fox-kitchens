@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.foxkitchenscolombia.com/sitemap.xml
